@@ -1,0 +1,173 @@
+<div class="container">
+ <div class="card-body">
+      <div class="col">
+          <p class=" h3 fw-bold text-danger">User Registration</p>
+          <label for="imageUpload">Select an image:</label>
+    <input type="file" id="imageUpload" (change)="onFileSelected($event)" accept="image/*">
+  </div>
+  </div>
+</div>
+
+<br>
+
+
+
+<!-- create registration -->
+  <div class="container">
+  <div class="row">
+      <div class="col-sm-4">
+          <form (ngSubmit)="createSubmit(registrationForm)"
+          #registrationForm="ngForm">
+            <div class="mb-2">
+              <input required
+                id="firstName"
+                [(ngModel)]="registration.firstName"
+                name="firstName"
+                class="form-control"
+                type="text"
+                placeholder="First Name.."
+                #firstNameVar="ngModel"
+                [ngClass]="{'is-invalid': firstNameVar.invalid && 
+                (firstNameVar.touched || firstNameVar.dirty)}">
+                <span class="invalid-feedback">
+              <span *ngIf="firstNameVar.invalid && (firstNameVar.touched || firstNameVar.dirty)">
+                Please enter your first name.
+              </span>
+              </span>
+            </div> 
+          <div class="mb-2">
+            <input required="true"
+            [(ngModel)]="registration.lastName" name="lastName" class="form-control" 
+             type="text" 
+             placeholder="last Name.."
+             #lastNameVar="ngModel"
+             [ngClass]="{'is-invalid': lastNameVar.invalid && 
+             (lastNameVar.touched || lastNameVar.dirty)}">
+             <span class="invalid-feedback">
+           <span *ngIf="lastNameVar.invalid && (lastNameVar.touched || lastNameVar.dirty)">
+             Please enter your last name.
+           </span>
+             </span>
+        </div>
+          <div class="mb-2">
+              <input required="true"
+              [(ngModel)]="registration.photo" name="photo"
+              type="text" class="form-control" placeholder="paste online imageUrl"
+              #photoVar="ngModel"
+              [ngClass]="{'is-invalid': photoVar.invalid && 
+              (photoVar.touched || photoVar.dirty)}">
+              <span class="invalid-feedback">
+            <span *ngIf="photoVar.invalid && (photoVar.touched || photoVar.dirty)">
+             Please paste here image imageUrl.
+            </span>
+              </span>
+          </div>
+          <div class="mb-2">
+            <input required
+              [(ngModel)]="registration.email"
+              name="email"
+              type="email"
+              class="form-control"
+              placeholder="Email"
+              #emailVar="ngModel"
+              [ngClass]="{'is-invalid': emailVar.invalid && 
+              (emailVar.touched || emailVar.dirty)}">
+              <span class="invalid-feedback">
+            <span *ngIf="emailVar.invalid && (emailVar.touched || emailVar.dirty)">
+              Please enter a email email.
+            </span>
+              </span>
+          </div>
+          <div class="mb-2">
+              <input required="true"
+              [(ngModel)]="registration.contact" name="contact"
+               type="number" class="form-control" 
+               placeholder="contact"
+               #contactVar="ngModel"
+               [ngClass]="{'is-invalid': contactVar.invalid && 
+               (contactVar.touched || contactVar.dirty)}">
+               <span class="invalid-feedback">
+             <span *ngIf="contactVar.invalid && (contactVar.touched || contactVar.dirty)">
+               Please enter your contact number.
+             </span>
+               </span>
+          </div>
+          <div class="mb-2">
+              <input required="true"
+              [(ngModel)]="registration.age" name="age"
+              type="text" class="form-control" placeholder="age"
+              #ageVar="ngModel"
+              [ngClass]="{'is-invalid': ageVar.invalid && 
+              (ageVar.touched || ageVar.dirty)}">
+              <span class="invalid-feedback">
+            <span *ngIf="ageVar.invalid && (ageVar.touched || ageVar.dirty)">
+              Please enter your age.
+            </span>
+              </span>
+          </div>
+          <div class="mb-2">
+              <input required="true"
+              [(ngModel)]="registration.address" name="address"
+               type="text" class="form-control" placeholder="address"
+               #addressVar="ngModel"
+               [ngClass]="{'is-invalid': addressVar.invalid && 
+               (addressVar.touched || addressVar.dirty)}">
+               <span class="invalid-feedback">
+             <span *ngIf="addressVar.invalid && (addressVar.touched || addressVar.dirty)">
+               Please enter your address.
+             </span>
+               </span>
+          </div>
+          <div class="mb-2">
+            <input required="true"
+            [(ngModel)]="registration.state" name="state"
+             type="text" class="form-control" placeholder="state"
+             #stateVar="ngModel"
+               [ngClass]="{'is-invalid': stateVar.invalid && 
+               (stateVar.touched || stateVar.dirty)}">
+               <span class="invalid-feedback">
+             <span *ngIf="stateVar.invalid && (stateVar.touched || stateVar.dirty)">
+               Please enter your state.
+             </span> 
+               </span>   
+        </div>
+        <div class="mb-2">
+            <input required="true"
+            [(ngModel)]="registration.country" name="country"
+             type="text" class="form-control" placeholder="country"
+             #countryVar="ngModel"
+               [ngClass]="{'is-invalid': countryVar.invalid && 
+               (countryVar.touched || countryVar.dirty)}">
+               <span class="invalid-feedback">
+             <span *ngIf="countryVar.invalid && (countryVar.touched || countryVar.dirty)">
+               Please enter your Country.
+             </span>
+             </span>
+             
+        </div>
+          <div class="mb-2">
+            <input required="true"
+            [(ngModel)]="registration.tag" name="tag"
+             type="text" class="form-control" placeholder="enter any hobbie"
+             #tagVar="ngModel"
+               [ngClass]="{'is-invalid': tagVar.invalid && 
+               (tagVar.touched || tagVar.dirty)}">
+               <span class="invalid-feedback">
+             <span *ngIf="tagVar.invalid && (tagVar.touched || tagVar.dirty)">
+               Please enter your any hobbie.
+             </span>
+               </span>
+        </div>
+          <div class="mb-2">
+              <input type="submit" class="btn btn-danger" value="Create"
+              [disabled]="!registrationForm.valid">
+              <a  class="btn btn-dark ms-2" routerLink="/" >Close</a>
+          </div>
+          </form>
+      </div>
+      <div class="col sm-4">
+          <img [src]="registration.photo" class="registration-img">
+      </div>
+  </div>
+</div>
+

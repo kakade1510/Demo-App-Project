@@ -1,0 +1,30 @@
+{
+    "registration": [
+      {
+        "id": "gfg",
+        "firstName": "Parachi",
+        "lastName": "Kakade",
+        "email": "kakadeprachi98@gmail.com",
+        "photo": "https://cdn2.storyasset.link/S5Eevi5qj4d92Uhvv7vGDMZUebs2/c7f9a7c515c8dfa11c2a5343b49617e0-ms-vrzueyfpmo.jpg",
+        "contact": 9021952634,
+        "age": 20,
+        "state": "maharashtra",
+        "country": "india",
+        "address": "Aurangabad, Maharashtra-431513",
+        "tag": "Sport"
+      },
+      {
+        "firstName": "Sushil",
+        "lastName": "Jawale",
+        "email": "jawalesushil70@gmail.com",
+        "address": "At post sawad tq.dis.hingoli",
+        "state": "Maharashtra",
+        "country": "India",
+        "photo": "https://media.licdn.com/dms/image/C5603AQHcdP_AluLkeg/profile-displayphoto-shrink_800_800/0/1644586771959?e=2147483647&v=beta&t=rGuGF4fkO2U1wEgy4b28xldlThB-lwkXClZ2Ju1P_7w",
+        "contact": 9021952634,
+        "age": "20",
+        "tag": "Sport",
+        "id": "v2wljOJ"
+      }
+    ]
+  }

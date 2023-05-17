@@ -1,0 +1,16 @@
+.profile{
+    padding-left: 7%;
+}
+
+.profile-img{
+    height: 250px;
+    width: 200px;
+    padding-left: 7%;
+    padding-top: 7%;
+    padding-bottom: 7%;
+   
+}
+
+.card{
+    size: 100%;
+}

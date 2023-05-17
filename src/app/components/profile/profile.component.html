@@ -1,0 +1,34 @@
+<div class="conatiner profile">
+    <div class="card mb-0" style="max-width: 1000px; height: fit-content;">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img  [src]="registration?.photo"  class="profile-img" alt="...">
+            <div> &nbsp; &nbsp;
+            <button type="submit" class="btn btn-warning  btn-sm" 
+            >Edit Photo</button>&nbsp;
+            <button type="submit" class="btn btn-warning  btn-sm" 
+             routerLink="/registration">Edit Profile</button>
+            </div>
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h2 class="card-title" style="color:dodgerblue">Profile</h2>
+              <p class="card-text">i'm {{registration?.firstName}} 
+                {{registration?.lastName}} and i'm above {{registration?.age}} years 
+                and you can send email to 
+                <br> <strong style="color:dodgerblue">
+                 <a href="#">{{registration?.email}}</a></strong>  
+                i live in the state of {{registration?.state}} <br>
+                i like to play {{registration?.tag}} and please save me 
+                newsletters.please <br> reach out me on my phone number 
+                {{registration?.contact}}</p>
+              
+              <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+              <button type="submit" class="btn btn-success" routerLink="/">Agree</button>&nbsp;&nbsp; &nbsp;&nbsp; 
+              <button type="submit" class="btn btn-success" routerLink="/registration">Back</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
